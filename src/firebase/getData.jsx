@@ -11,3 +11,6 @@ export const getCollectionData = async (collectionName) => {
 
   return arr;
 };
+
+// Get all the data from a document
+export const getDocumentData = async (collectionName, documentName) => {};

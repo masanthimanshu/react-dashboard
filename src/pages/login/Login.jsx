@@ -1,21 +1,21 @@
 import { useState } from "react";
+import style from "./style.module.css";
 import { useNavigate } from "react-router-dom";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 import {
-  Container,
-  Box,
-  TextField,
-  Button,
-  InputAdornment,
-  FormControl,
-  InputLabel,
-  OutlinedInput,
-  IconButton,
   Alert,
+  Button,
+  TextField,
+  IconButton,
+  InputLabel,
+  FormControl,
+  OutlinedInput,
+  InputAdornment,
 } from "@mui/material";
 
 export const Login = () => {
   const navigate = useNavigate();
+
   const [user, setUser] = useState("");
   const [pass, setPass] = useState("");
   const [showPass, setShowPass] = useState(false);
@@ -32,26 +32,11 @@ export const Login = () => {
   };
 
   return (
-    <>
-      <Container
-        maxWidth="lg"
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          height: "100vh",
-        }}
-      >
-        <Box
-          sx={{
-            p: 5,
-            boxShadow: 3,
-            borderRadius: 3,
-            textAlign: "center",
-          }}
-        >
-          <img src="./images/logo.png" alt="Logo" />
-          <br />
+    <section className={style.main_sec}>
+      <div className={style.left}></div>
+      <div className={style.right}>
+        <div className={style.inner}>
+          <img src="/images/logo.png" alt="Logo" />
           <br />
           {showAlert ? (
             <Alert severity="error" sx={{ mb: 2 }}>
@@ -91,8 +76,8 @@ export const Login = () => {
               LOGIN
             </Button>
           </form>
-        </Box>
-      </Container>
-    </>
+        </div>
+      </div>
+    </section>
   );
 };

@@ -1,3 +1,5 @@
+import { Delete } from "@mui/icons-material";
+import { Sidebar } from "../../components/Sidebar";
 import {
   Table,
   TableRow,
@@ -6,50 +8,46 @@ import {
   TableHead,
   IconButton,
 } from "@mui/material";
-import { Edit } from "@mui/icons-material";
-import { Sidebar } from "../../components/Sidebar";
 
 export const Users = () => {
   return (
-    <>
-      <Sidebar>
-        <Table sx={{ minWidth: 650 }}>
-          <TableHead>
-            <TableRow>
-              <TableCell>
-                <b>S.No.</b>
-              </TableCell>
-              <TableCell>
-                <b>Name</b>
-              </TableCell>
-              <TableCell>
-                <b>City</b>
-              </TableCell>
-              <TableCell>
-                <b>Gender</b>
-              </TableCell>
-              <TableCell>
-                <b>Action</b>
-              </TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            <UserTableData
-              index={1}
-              name="John Doe"
-              place="Delhi"
-              gender="Male"
-            />
-            <UserTableData
-              index={2}
-              name="John Doe"
-              place="Delhi"
-              gender="Male"
-            />
-          </TableBody>
-        </Table>
-      </Sidebar>
-    </>
+    <Sidebar>
+      <Table sx={{ minWidth: 650 }}>
+        <TableHead>
+          <TableRow>
+            <TableCell>
+              <b>S.No.</b>
+            </TableCell>
+            <TableCell>
+              <b>Name</b>
+            </TableCell>
+            <TableCell>
+              <b>City</b>
+            </TableCell>
+            <TableCell>
+              <b>Gender</b>
+            </TableCell>
+            <TableCell>
+              <b>Action</b>
+            </TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          <UserTableData
+            index={1}
+            name="John Doe"
+            place="Delhi"
+            gender="Male"
+          />
+          <UserTableData
+            index={2}
+            name="John Doe"
+            place="Delhi"
+            gender="Male"
+          />
+        </TableBody>
+      </Table>
+    </Sidebar>
   );
 };
 
@@ -61,8 +59,8 @@ const UserTableData = ({ index, name, place, gender }) => {
       <TableCell>{place}</TableCell>
       <TableCell>{gender}</TableCell>
       <TableCell>
-        <IconButton onClick={() => alert("Edit Button Clicked")}>
-          <Edit color="primary" />
+        <IconButton onClick={() => alert("Delete Clicked")}>
+          <Delete color="primary" />
         </IconButton>
       </TableCell>
     </TableRow>
