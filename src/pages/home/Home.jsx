@@ -7,7 +7,7 @@ import { Line } from "react-chartjs-2";
 export const Home = () => {
   return (
     <Sidebar>
-      <Grid container spacing={4} textAlign="center">
+      <Grid container spacing={2} textAlign="center">
         <Grid item md={3}>
           <TopCard heading="Data 1" text="35" />
         </Grid>
@@ -21,7 +21,10 @@ export const Home = () => {
           <TopCard heading="Data 4" text="35" />
         </Grid>
       </Grid>
-      <Container maxWidth="md" sx={{ mt: 10 }}>
+      <br />
+      <br />
+      <br />
+      <Container maxWidth="md">
         <Line data={chartData} options={chartOptions} />
       </Container>
     </Sidebar>
@@ -42,7 +45,7 @@ const TopCard = ({ heading, text }) => {
         <b>{heading}</b>
       </Typography>
       <br />
-      <Typography variant="h5">{text}</Typography>
+      <Typography variant="h4">{text}</Typography>
     </Box>
   );
 };
